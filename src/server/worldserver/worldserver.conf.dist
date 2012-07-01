@@ -2140,7 +2140,7 @@ Rate.Drop.Item.ReferencedAmount = 1
 #    Rate.XP.Quest
 #    Rate.XP.Explore
 #    Rate.XP.Kill.Premium
-#    Rate.XP.Quest.Premium	
+#    Rate.XP.Quest.Premium
 #    Rate.XP.Explore.Premium
 #        Description: Experience rates.
 #        Default:     1 - (Rate.XP.Kill)

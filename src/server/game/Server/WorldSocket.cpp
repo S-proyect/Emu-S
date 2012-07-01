@@ -78,7 +78,7 @@ struct ServerPktHeader
         return 2+(isLargePacket()?3:2);
     }
 
-    bool isLargePacket()
+    bool isLargePacket() const
     {
         return size > 0x7FFF;
     }
@@ -899,7 +899,7 @@ int WorldSocket::HandleAuthSession (WorldPacket& recvPacket)
         return -1;
     }
 
-	QueryResult premresult =
+    QueryResult premresult =
         LoginDatabase.PQuery ("SELECT 1 "
                                 "FROM account_premium "
                                 "WHERE id = '%u' "

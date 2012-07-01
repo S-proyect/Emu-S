@@ -76,8 +76,8 @@
 #include "Channel.h"
 #include "WardenCheckMgr.h"
 #include "Warden.h"
-#include "OutdoorPvPWG.h"
 #include "CalendarMgr.h"
+#include "OutdoorPvPWG.h"
 
 ACE_Atomic_Op<ACE_Thread_Mutex, bool> World::m_stopEvent = false;
 uint8 World::m_ExitCode = SHUTDOWN_EXIT_CODE;
@@ -1204,8 +1204,8 @@ void World::LoadConfigSettings(bool reload)
     // misc
     m_bool_configs[CONFIG_PDUMP_NO_PATHS] = ConfigMgr::GetBoolDefault("PlayerDump.DisallowPaths", true);
     m_bool_configs[CONFIG_PDUMP_NO_OVERWRITE] = ConfigMgr::GetBoolDefault("PlayerDump.DisallowOverwrite", true);
-	
-	//Wintergrasp
+
+ //Wintergrasp
     m_bool_configs[CONFIG_OUTDOORPVP_WINTERGRASP_ENABLED]         = ConfigMgr::GetBoolDefault("OutdoorPvP.Wintergrasp.Enabled", true);
     m_int_configs[CONFIG_OUTDOORPVP_WINTERGRASP_SAVESTATE_PERIOD] = ConfigMgr::GetIntDefault("OutdoorPvP.Wintergrasp.SaveState.Period", 10000);
     m_int_configs[CONFIG_OUTDOORPVP_WINTERGRASP_START_TIME]       = ConfigMgr::GetIntDefault("OutdoorPvP.Wintergrasp.StartTime", 30);
@@ -2938,7 +2938,6 @@ void World::ProcessQueryCallbacks()
     }
 }
 
-
 void World::SendWintergraspState()
 {
     OutdoorPvPWG *pvpWG = (OutdoorPvPWG*)sOutdoorPvPMgr->GetOutdoorPvPToZoneId(4197);
@@ -2964,6 +2963,7 @@ void World::SendWintergraspState()
         }
     }
 }
+
 
 void World::LoadCharacterNameData()
 {

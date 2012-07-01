@@ -513,7 +513,6 @@ uint8 Vehicle::GetAvailableSeatCount() const
     return ret;
 }
 
-
 void Vehicle::Relocate(Position pos)
 {
     sLog->outDebug(LOG_FILTER_VEHICLES, "Vehicle::Relocate %u", _me->GetEntry());

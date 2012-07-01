@@ -55,14 +55,17 @@ void AddSC_gobject_commandscript();
 void AddSC_honor_commandscript();
 void AddSC_instance_commandscript();
 void AddSC_learn_commandscript();
+void AddSC_list_commandscript();
 void AddSC_misc_commandscript();
 void AddSC_modify_commandscript();
 void AddSC_npc_commandscript();
 void AddSC_quest_commandscript();
 void AddSC_reload_commandscript();
 void AddSC_tele_commandscript();
+void AddSC_server_commandscript();
 void AddSC_titles_commandscript();
 void AddSC_wp_commandscript();
+void AddSC_character_commandscript();
 
 #ifdef SCRIPTS
 //world
@@ -597,6 +600,7 @@ void AddSC_outdoorpvp_zm();
 void AddSC_outdoorpvp_wg();
 void AddSC_wintergrasp();
 
+
 // player
 void AddSC_chat_log();
 
@@ -661,14 +665,17 @@ void AddCommandScripts()
     AddSC_honor_commandscript();
     AddSC_instance_commandscript();
     AddSC_learn_commandscript();
+    AddSC_list_commandscript();
     AddSC_misc_commandscript();
     AddSC_modify_commandscript();
     AddSC_npc_commandscript();
     AddSC_quest_commandscript();
     AddSC_reload_commandscript();
     AddSC_tele_commandscript();
+    AddSC_server_commandscript();
     AddSC_titles_commandscript();
     AddSC_wp_commandscript();
+    AddSC_character_commandscript();
 }
 
 void AddWorldScripts()
@@ -1209,7 +1216,7 @@ void AddNorthrendScripts()
     AddSC_zuldrak();
     AddSC_crystalsong_forest();
     AddSC_isle_of_conquest();
-	AddSC_wintergrasp();
+    AddSC_wintergrasp();
 #endif
 }
 

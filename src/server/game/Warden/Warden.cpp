@@ -196,7 +196,6 @@ std::string Warden::Penalty(WardenCheck* check /*= NULL*/)
             sWorld->BanAccount(BAN_ACCOUNT, accountName, duration.str(), banReason.str(),"Server");
 
             return "Ban";
-            break;
         }
     default:
         break;
@@ -212,7 +211,7 @@ void WorldSession::HandleWardenDataOpcode(WorldPacket& recvData)
     sLog->outDebug(LOG_FILTER_WARDEN, "Got packet, opcode %02X, size %u", opcode, uint32(recvData.size()));
     recvData.hexlike();
 
-    switch(opcode)
+    switch (opcode)
     {
         case WARDEN_CMSG_MODULE_MISSING:
             _warden->SendModuleToClient();
